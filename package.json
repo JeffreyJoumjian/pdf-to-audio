@@ -1,0 +1,18 @@
+{
+  "name": "pdf-to-audio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "pdf-parse": "^1.1.1",
+    "say": "^0.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node generateText.js",
+    "export": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
