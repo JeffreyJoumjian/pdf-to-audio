@@ -32,14 +32,14 @@ function exportAudio() {
 		let part = text.toString().substring(i * MAX_SIZE, (i + 1) * MAX_SIZE);
 
 		say.export(part, 'Samantha', SPEED, `./audio/part-${curri}.wav`, (err) => {
-			err ? console.error(err) : console.log(`Your text has been saved to part-${curri}.wav -> ${part.length / 1000}`);
+			err ? console.error(err) : console.log(`Your text has been saved to ./audio/part-${curri}.wav -> ${part.length / 1000}`);
 		});
 	}
 
 	// export remaining text to audio
 	part = text.toString().substring(i * MAX_SIZE, i * MAX_SIZE + remaining);
 	say.export(part, 'Samantha', 1, `./audio/part-${i}.wav`, (err) => {
-		err ? console.error(err) : console.log(`Your text has been saved to part-${i}.wav`);
+		err ? console.error(err) : console.log(`Your text has been saved to ./audio/part-${i}.wav`);
 	});
 }
 
