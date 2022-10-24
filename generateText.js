@@ -5,6 +5,8 @@ const pdfParser = require('pdf-parse');
 // recommended size = 50000 || max size = 200000
 // decrease this if your OS throws and error.
 const MAX_SIZE = 200000;
+// I recommend you change the speed in your listening software instead of here
+const SPEED = 1;
 
 // read pdf and write text to output file
 async function readBook(pdf) {
@@ -29,7 +31,7 @@ function exportAudio() {
 
 		let part = text.toString().substring(i * MAX_SIZE, (i + 1) * MAX_SIZE);
 
-		say.export(part, 'Samantha', 1, `./audio/part-${curri}.wav`, (err) => {
+		say.export(part, 'Samantha', SPEED, `./audio/part-${curri}.wav`, (err) => {
 			err ? console.error(err) : console.log(`Your text has been saved to part-${curri}.wav -> ${part.length / 1000}`);
 		});
 	}

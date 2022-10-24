@@ -9,8 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node generateText.js",
-    "export": "node index.js"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
